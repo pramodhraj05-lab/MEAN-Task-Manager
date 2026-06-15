@@ -1,0 +1,17 @@
+export interface Task {
+  _id?: string;
+  title: string;
+  description?: string;
+  status: 'pending' | 'in-progress' | 'completed';
+  priority: 'low' | 'medium' | 'high';
+  dueDate?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  count?: number;
+  message?: string;
+}
